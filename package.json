@@ -4,16 +4,23 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
   "private": true,
+  "lint-staged": {
+    "src/**/*.{ts,css,html}": [
+        "npm run prettier:check"
+    ]
+},
   "husky": {
     "hooks":{
-      "precommit": "yarn precommit"
+      "pre-commit": "lint-staged",
+      "pre-push": ""
     }
   },
   "dependencies": {
