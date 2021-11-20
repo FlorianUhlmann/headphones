@@ -1,12 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-#check commit msg
-story_number_description="[0-9a-zA-Z]*\s:\s"
-commit_pattern="($story_number_description)"
-dev_branch_pattern="(main)"
-
-npx --no-install -q git-branch-is -r "^($commit_pattern)"
-
-#check lint
-npm run lint
+#npx husky add .husky/pre-commit
+npx lint-staged

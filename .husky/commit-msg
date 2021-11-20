@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+if ! grep -E "[a-zA-Z0-9]*\s:\s|(Merge branch)" $1; then
+    echo first echo $1
+    echo "ERROR: No task number provided in the commit message"
+    exit 1
+fi
