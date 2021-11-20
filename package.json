@@ -9,16 +9,18 @@
     "test": "ng test",
     "lint": "ng lint",
     "precommit": "lint-staged",
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\"",
+    "compodoc": "npx compodoc -p tsconfig.doc.json",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "lint-staged": {
     "src/**/*.{ts,css,html}": [
-        "npm run prettier:check"
+      "npm run prettier:check"
     ]
-},
+  },
   "husky": {
-    "hooks":{
+    "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": ""
     }
@@ -45,6 +47,7 @@
     "@angular-eslint/template-parser": "12.6.1",
     "@angular/cli": "~12.2.13",
     "@angular/compiler-cli": "~12.2.0",
+    "@compodoc/compodoc": "^1.1.15",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
