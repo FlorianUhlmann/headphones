@@ -1,27 +1,95 @@
-# Headphones
+## Headphones
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
+## usefull commands
 
-## Development server
+#### created a module with component and routing and hangs the module in to ap module routing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng g module --module=app.module --route=#newComponent #newComponent --routing
 
-## Code scaffolding
+## Firebase
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-## Build
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyChy16KhjospA3OrrT9e_10yma1IQTITHM",
+authDomain: "headphone-project.firebaseapp.com",
+projectId: "headphone-project",
+storageBucket: "headphone-project.appspot.com",
+messagingSenderId: "636300857082",
+appId: "1:636300857082:web:ef583d1b5fc46fe5e38343",
+measurementId: "G-JQRG3C8B9F"
+};
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-## Running unit tests
+#### Project Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+start up
 
-## Running end-to-end tests
+eslint
+doc - https://compodoc.github.io/compodoc/
+e2e
+formatter -- prettier
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+language @ngx-translate/core
+core  
+shared
 
-## Further help
+layout
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Project Log
+
+### 07.11.2021
+
+- added the eslint with airbnb configuration
+- added pretifier
+- added husky with precommit config
+- added core and shared module
+  -- core module has error handling / http-error && app-error
+- added shared module with material
+- added cypress
+- added login && home module + related components:
+- added github pages
+
+Problem to solve right now,
+-Make the error handling work. like in the demo -> https://pkief.medium.com/global-error-handling-in-angular-ea395ce174b1
+
+- let linter run correct.
+- make github pages work
+
+### 16.11.2021
+
+- call with ramy
+- nüm script config
+- "start:pwa": "http-server -p 8080 -c-1 dist/robotic-suite-next-gen",
+  "write:env": "ngx-scripts env npm_package_version",
+  "format": "prettier \"src/**/\*.{ts,js,html,md,scss,json}\" --write && tslint --fix -c ./tslint.json 'src/**/\*.{ts,js}'",
+  "analyze": "ng build --stats-json && webpack-bundle-analyzer ./dist/robotic-suite-next-gen/stats.json --port 8890",
+  "compodoc": "npx compodoc -p tsconfig.doc.json --theme stripe",
+  "compodoc:start": "compodoc -p tsconfig.doc.json --theme s
+
+- setup new project
+  - steps
+  1. linter and prettier
+  2. husky. https://typicode.github.io/husky/#/
+  3. compudoc
+
+# 20.11.2021
+
+added folder
+-core -
+
+take all components
+see commons things
+make a core class
+-ask yourself - would i use it-
+
+# 21.11.2021
