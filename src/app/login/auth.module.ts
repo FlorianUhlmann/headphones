@@ -2,13 +2,13 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {LoginComponent} from './login.component';
+import {LoginComponent} from './login/login.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
-import {LoginRoutingModule} from './login-routing.module';
+import {AuthRoutingModule} from './auth-routing.module';
 import {AngularMaterialModule} from '../shared/material/material.module';
 
 @NgModule({
   declarations: [LoginComponent, SignUpComponent],
-  imports: [AngularMaterialModule, CommonModule, FormsModule, LoginRoutingModule, ReactiveFormsModule]
+  imports: [AngularMaterialModule, CommonModule, FormsModule, AuthRoutingModule, ReactiveFormsModule]
 })
-export class LoginModule {}
+export class AuthModule {}
