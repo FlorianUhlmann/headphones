@@ -11,3 +11,10 @@
 </nav>
 
 <router-outlet></router-outlet>
+<p>mat-toolbar color="primary"> Error Interceptor Demo</p>
+
+<div class="content-container">
+  <button mat-raised-button (click)="localError()">Local front end error</button>
+  <button mat-raised-button (click)="failingRequest()">Server request with error</button>
+  <button mat-raised-button (click)="successfulRequest()">Successful request showing loading spinner</button>
+</div>

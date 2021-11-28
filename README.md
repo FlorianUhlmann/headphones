@@ -93,3 +93,14 @@ make a core class
 -ask yourself - would i use it-
 
 # 21.11.2021
+
+# 28.11.2021
+
+rami talk -
+
+return !this.form.controls.anhaenge.valid || !this.form.controls.anhaenge.value.length;
+if (!this.form.controls.anhaenge.valid) {
+return true;
+}
+return !this.form.controls.anhaenge.value.length;
+}

@@ -12,30 +12,31 @@ if ! git diff HEAD --quiet; then
     exit 1
 fi
 
-if ! npm install; then
-    echo "ERROR: npm install failed."
-    exit 2
-fi
 
-if ! npx ng test --watch=false; then
-    echo "ERROR: Some unit tests failed."
-    exit 4
-fi
+#if ! npm install; then
+#    echo "ERROR: npm install failed."
+#    exit 2
+#fi
 
-if ! npx ng build --prod; then
-    echo "ERROR: Production build failed."
-    exit 5
-fi
+#if ! npx ng test --watch=false; then
+#    echo "ERROR: Some unit tests failed."
+#    exit 4
+#fi
 
-main_bundle_size=$(find dist -regextype posix-extended -regex '.*(main|styles|polyfills|scripts|runtime)\..*\.(js|css)' -exec du -c {} + | grep total | cut -f1)
-if [ $main_bundle_size -gt 6000 ]; then
-    echo "ERROR: Main bundle size exceeds 6 MB. The size is $main_bundle_size KB"
-    exit 6
-fi
+#if ! npx ng build --prod; then
+#    echo "ERROR: Production build failed."
+#    exit 5
+#fi
 
-dist_folder_size=$(du -s dist | cut -f1)
-if [ $dist_folder_size -gt 9999 ]; then
-    echo "ERROR: Application size exceeds 10 MB. The size of the dist folder is $dist_folder_size KB"
-    exit 7
-fi
+#main_bundle_size=$(find dist -regextype posix-extended -regex '.*(main|styles|polyfills|scripts|runtime)\..*\.(js|css)' -exec du -c {} + | grep total | cut -f1)
+#if [ $main_bundle_size -gt 6000 ]; then
+#    echo "ERROR: Main bundle size exceeds 6 MB. The size is $main_bundle_size KB"
+#    exit 6
+#fi
+
+#dist_folder_size=$(du -s dist | cut -f1)
+#if [ $dist_folder_size -gt 9999 ]; then
+#    echo "ERROR: Application size exceeds 10 MB. The size of the dist folder is $dist_folder_size KB"
+#    exit 7
+#fi
 
