@@ -104,3 +104,19 @@ return true;
 }
 return !this.form.controls.anhaenge.value.length;
 }
+
+# out of order Git config
+
+[alias]
+s = status
+d = diff
+cm = "commit -m"
+a = add
+sw = switch
+com = "!f() { git add . && git commit -m \"$1\" && git push; }; f"
+aliases = config
+fa = fetch --all
+b = branch
+
+[rebase]
+instructionFormat = %s [%an] # add the commit author to the end of each line
