@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanLoad, Route, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { AuthCheckService } from 'src/app/shared/services/auth-check.service';
 
 @Injectable({providedIn: 'root'})
-export class LazyAuthGuard implements CanActivate {
+export class LazyAuthGuard implements CanLoad {
     constructor(private auth:AuthCheckService, private router: Router) { }
 
 
-    canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+    canLoad(route: Route) {
         return this.auth.isLoggedIn$
             .pipe(map(
                     (isLoggedIn:boolean) => isLoggedIn || this.router.createUrlTree([''])

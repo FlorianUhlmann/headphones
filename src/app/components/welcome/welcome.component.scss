@@ -2,3 +2,8 @@
     background: rgb(244,114,22);
     background: linear-gradient(148deg, rgba(244,114,22,1) 0%, rgba(219,29,43,1) 100%);
 }
+
+.content {
+    width: 100vw;
+    height: calc(100vh - 64px);
+}

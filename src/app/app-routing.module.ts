@@ -10,7 +10,7 @@ const routes: Routes = [
     {path: '', redirectTo: 'auth/login', pathMatch: 'full'},
     
   ]},
-  {path: 'home', canActivate:[LazyAuthGuard], loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)},
+  {path: 'home', canLoad:[LazyAuthGuard], loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)},
   { path: 'error-demo', loadChildren: () => import('./components/error-demo/error-demo.module').then(m => m.ErrorDemoModule) },
   {path: '', redirectTo: 'welcome', pathMatch: 'full'},
   {path: '**', redirectTo: 'home', pathMatch: 'full'},

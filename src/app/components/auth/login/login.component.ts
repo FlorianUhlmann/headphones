@@ -9,12 +9,12 @@ import { AuthenticationService } from '../authentication.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent extends FormControllerDirective<Login> {
+export class LoginComponent extends FormControllerDirective<Login>  {
   
   form: FormGroup = this.fb.group({
     email: ['', Validators.required],
     password: ['', Validators.required]
-  });;
+  });
   
   constructor(private fb: FormBuilder, private api: AuthenticationService, private readonly router: Router) {
     super();
@@ -26,6 +26,8 @@ export class LoginComponent extends FormControllerDirective<Login> {
           this.router.navigate(['home']);
       }
     })
+
+
   }
 
 }

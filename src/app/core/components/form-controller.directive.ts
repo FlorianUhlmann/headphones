@@ -13,12 +13,7 @@ export abstract class FormControllerDirective<T> extends ComponentBase {
   public constructor() {
     super();
   }
-
-  
-  get modelJson(): T {
-    return this.form.getRawValue() as T;
-  }
-  
+ 
   modelFormData(data: any): FormData {
     const formData = new FormData();
     Object.keys(data).forEach(key => {
