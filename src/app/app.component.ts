@@ -1,5 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Component} from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthCheckService } from './shared/services/auth-check.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,20 +10,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'headphones';
 
-  constructor(private http: HttpClient) {}
+  constructor(private router:Router, public authService: AuthCheckService) {}
   isEqual() {
     return true;
   }
 
-  localError() {
-    throw Error('The app component has thrown an error!');
-  }
+  isLoggedIn!: boolean;
 
-  failingRequest() {
-    this.http.get('https://httpstat.us/404?sleep=2000').toPromise();
-  }
 
-  successfulRequest() {
-    this.http.get('https://httpstat.us/200?sleep=2000').toPromise();
-  }
 }

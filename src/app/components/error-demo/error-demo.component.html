@@ -1,0 +1,11 @@
+<h1>error-demo works!</h1>
+
+<div class="content-container content-appearance">
+    <button mat-raised-button (click)="localError()">Local front end error</button>
+    <button mat-raised-button (click)="failingRequest()">Server request with error</button>
+    <button mat-raised-button (click)="successfulRequest()">Successful request showing loading spinner</button>
+</div>
+
+<button mat-button routerLink="/welcome">
+    <mat-icon>home</mat-icon>
+</button>

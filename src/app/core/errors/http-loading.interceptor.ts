@@ -1,6 +1,6 @@
 import {HttpHandler, HttpRequest, HttpEvent, HttpInterceptor} from '@angular/common/http';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {finalize} from 'rxjs/operators';
+import {BehaviorSubject, Observable, of} from 'rxjs';
+import {catchError, finalize, tap} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {LoadingDialogService} from 'src/app/shared/loading/loading-dialog.service';
 import {HttpLoadingStateService} from 'src/app/shared/loading/http-loading.service';
@@ -22,7 +22,7 @@ export class HttpLoadingInterceptor implements HttpInterceptor {
       finalize(() => {
         this.loadingDialogService.hideDialog();
         this.httpLoadingService.nextState(false);
-      })
+      }),
     ) as Observable<HttpEvent<any>>;
   }
 }

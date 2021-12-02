@@ -31,20 +31,111 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="headphones">Headphones</h1>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 12.2.13.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+<h2 id="headphones">Headphones</h2>
+<h2 id="usefull-commands">usefull commands</h2>
+<h4 id="created-a-module-with-component-and-routing-and-hangs-the-module-in-to-ap-module-routing">created a module with component and routing and hangs the module in to ap module routing</h4>
+<p>ng g module --module=app.module --route=#newComponent #newComponent --routing</p>
+<h2 id="firebase">Firebase</h2>
+<p>// Import the functions you need from the SDKs you need
+import { initializeApp } from &quot;firebase/app&quot;;
+import { getAnalytics } from &quot;firebase/analytics&quot;;
+// TODO: Add SDKs for Firebase products that you want to use
+// <a href="https://firebase.google.com/docs/web/setup#available-libraries">https://firebase.google.com/docs/web/setup#available-libraries</a></p>
+<p>// Your web app&#39;s Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: &quot;AIzaSyChy16KhjospA3OrrT9e_10yma1IQTITHM&quot;,
+authDomain: &quot;headphone-project.firebaseapp.com&quot;,
+projectId: &quot;headphone-project&quot;,
+storageBucket: &quot;headphone-project.appspot.com&quot;,
+messagingSenderId: &quot;636300857082&quot;,
+appId: &quot;1:636300857082:web:ef583d1b5fc46fe5e38343&quot;,
+measurementId: &quot;G-JQRG3C8B9F&quot;
+};</p>
+<p>// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);</p>
+<h4 id="project-setup">Project Setup</h4>
+<p>start up</p>
+<p>eslint
+doc - <a href="https://compodoc.github.io/compodoc/">https://compodoc.github.io/compodoc/</a>
+e2e
+formatter -- prettier</p>
+<p>language @ngx-translate/core
+core<br>shared</p>
+<p>layout</p>
+<h1 id="project-log">Project Log</h1>
+<h3 id="07112021">07.11.2021</h3>
+<ul>
+<li>added the eslint with airbnb configuration</li>
+<li>added pretifier</li>
+<li>added husky with precommit config</li>
+<li>added core and shared module
+-- core module has error handling / http-error &amp;&amp; app-error</li>
+<li>added shared module with material</li>
+<li>added cypress</li>
+<li>added login &amp;&amp; home module + related components:</li>
+<li>added github pages</li>
+</ul>
+<p>Problem to solve right now,
+-Make the error handling work. like in the demo -&gt; <a href="https://pkief.medium.com/global-error-handling-in-angular-ea395ce174b1">https://pkief.medium.com/global-error-handling-in-angular-ea395ce174b1</a></p>
+<ul>
+<li>let linter run correct.</li>
+<li>make github pages work</li>
+</ul>
+<h3 id="16112021">16.11.2021</h3>
+<ul>
+<li><p>call with ramy</p>
+</li>
+<li><p>nüm script config</p>
+</li>
+<li><p>&quot;start:pwa&quot;: &quot;http-server -p 8080 -c-1 dist/robotic-suite-next-gen&quot;,
+&quot;write:env&quot;: &quot;ngx-scripts env npm_package_version&quot;,
+&quot;format&quot;: &quot;prettier &quot;src/<strong>/*.{ts,js,html,md,scss,json}&quot; --write &amp;&amp; tslint --fix -c ./tslint.json &#39;src/</strong>/*.{ts,js}&#39;&quot;,
+&quot;analyze&quot;: &quot;ng build --stats-json &amp;&amp; webpack-bundle-analyzer ./dist/robotic-suite-next-gen/stats.json --port 8890&quot;,
+&quot;compodoc&quot;: &quot;npx compodoc -p tsconfig.doc.json --theme stripe&quot;,
+&quot;compodoc:start&quot;: &quot;compodoc -p tsconfig.doc.json --theme s</p>
+</li>
+<li><p>setup new project</p>
+<ul>
+<li>steps</li>
+</ul>
+<ol>
+<li>linter and prettier</li>
+<li>husky. <a href="https://typicode.github.io/husky/#/">https://typicode.github.io/husky/#/</a></li>
+<li>compudoc</li>
+</ol>
+</li>
+</ul>
+<h1 id="20112021">20.11.2021</h1>
+<p>added folder
+-core -</p>
+<p>take all components
+see commons things
+make a core class
+-ask yourself - would i use it-</p>
+<h1 id="21112021">21.11.2021</h1>
+<h1 id="28112021">28.11.2021</h1>
+<p>rami talk -</p>
+<p>return !this.form.controls.anhaenge.valid || !this.form.controls.anhaenge.value.length;
+if (!this.form.controls.anhaenge.valid) {
+return true;
+}
+return !this.form.controls.anhaenge.value.length;
+}</p>
+<h1 id="out-of-order-git-config">out of order Git config</h1>
+<p>[alias]
+s = status
+d = diff
+cm = &quot;commit -m&quot;
+a = add
+sw = switch
+com = &quot;!f() { git add . &amp;&amp; git commit -m &quot;$1&quot; &amp;&amp; git push; }; f&quot;
+aliases = config
+fa = fetch --all
+b = branch</p>
+<p>[rebase]
+instructionFormat = %s [%an] # add the commit author to the end of each line</p>
 
 
 

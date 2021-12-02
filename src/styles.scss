@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 
+
 body {
   min-height: 100vh;
   background-color: #e5e5e5;
@@ -106,4 +107,11 @@ body {
 
 .main-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
+}
+
+// new styles
+
+.background{
+  background: rgba(244,114,22, 0.3);
+  background: linear-gradient(148deg, rgba(244,114,22,1) 0%, rgba(219,29,43,1) 100%);
 }
