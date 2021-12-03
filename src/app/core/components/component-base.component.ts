@@ -1,8 +1,8 @@
-import {Directive, OnDestroy, OnInit} from '@angular/core';
+import {Component, Directive, OnDestroy, OnInit} from '@angular/core';
 import {Subscription, Unsubscribable} from 'rxjs';
 
-@Directive()
-export abstract class ComponentBase implements OnDestroy, OnInit {
+@Component({  template: ''  })
+export  class ComponentBase implements OnDestroy, OnInit {
   private subscriptions$ = new Subscription();
 
   subscription(observable: Unsubscribable) {

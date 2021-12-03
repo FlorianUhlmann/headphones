@@ -2,10 +2,12 @@ import {ErrorHandler, NgModule} from '@angular/core';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpLoadingInterceptor} from './errors/http-loading.interceptor';
 import {ErrorInterceptor} from './errors/global-error-handler';
+import { ComponentBase } from './components/component-base.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ComponentBase],
   imports: [],
+  exports: [ComponentBase],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

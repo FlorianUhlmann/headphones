@@ -1,7 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthCheckService } from './shared/services/auth-check.service';
+import { AuthCheckService } from './shared/services/auth-store.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

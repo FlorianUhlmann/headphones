@@ -1,17 +1,16 @@
 import {Directive, EventEmitter} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {Observable, of, ReplaySubject, Subject} from 'rxjs';
-import {ComponentBase} from './component-base.directive';
+import {ComponentBase} from './component-base.component';
 
 @Directive()
-export abstract class FormControllerDirective<T> extends ComponentBase {
+export abstract class FormControllerDirective<T>  {
   abstract form: FormGroup;
 
   submitForm$: Subject<T> = new ReplaySubject<T>();
   apiResponse!: any;
 
   public constructor() {
-    super();
   }
  
   modelFormData(data: any): FormData {

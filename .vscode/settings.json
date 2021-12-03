@@ -51,7 +51,7 @@
 	"explorer.confirmDragAndDrop": false,
 	"json.maxItemsComputed": 500000,
 	"workbench.iconTheme": "eq-material-theme-icons-darker",
-	"window.zoomLevel": 0,
+	"window.zoomLevel": -1,
 	"editor.minimap.renderCharacters": false,
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": false,

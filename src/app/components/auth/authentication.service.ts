@@ -7,7 +7,7 @@ import { MapOperator } from 'rxjs/internal/operators/map';
 import { map, tap } from 'rxjs/operators';
 import { LoginDto } from 'src/app/core/model/LoginDto';
 import { LoginToken } from 'src/app/core/model/LoginToken';
-import { AuthCheckService } from 'src/app/shared/services/auth-check.service';
+import { AuthCheckService } from 'src/app/shared/services/auth-store.service';
 
 @Injectable({
   providedIn: 'root'
